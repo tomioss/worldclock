@@ -1,7 +1,7 @@
 export const menuItems = [
   {
     'name': '>tom_',
-    'link': '#home'
+    'link': 'https://tabao-fs.github.io/'
   },
   {
     'name': 'world clock',
