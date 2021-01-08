@@ -6,7 +6,7 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      active: menuItems[0].name
+      active: menuItems[1].name
     }
     this.handleClick = this.handleClick.bind(this);
   }
