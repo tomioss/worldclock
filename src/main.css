@@ -53,3 +53,28 @@ ul.taskbar > li > a:hover {
 #footer > a:hover {
   text-decoration: underline;
 }
+
+/* Home */
+#home {
+  display: grid;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 576px) {
+  #home {
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  #home {
+    grid-template-columns: 2fr 8fr 2fr;
+  }
+}
+
+@media (min-width: 992px) {
+  #home {
+    grid-template-columns: 2fr 6fr 2fr;
+  }
+}
