@@ -1,0 +1,38 @@
+/* General */
+body {
+  margin: 0px;
+  font-family: 'robotoregular';
+}
+
+.wrapper {
+  display: grid;
+}
+
+/* Header */
+ul.taskbar {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
+ul.taskbar > li > a {
+  line-height: 65px;
+  padding: 21.7px;
+  margin-right: 4px;
+  color: #cccccc;
+  text-decoration: none;
+}
+
+ul.taskbar > li.active > a {
+  background-color: #333333;
+}
+
+ul.taskbar > li > a:hover {
+  color: #d0d0d0;
+  background-color: #333333;
+}
+
+#header {
+  background-color: #606060;
+}
