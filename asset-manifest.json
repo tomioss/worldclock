@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/worldclock/static/css/main.9cf96c30.chunk.css",
-    "main.js": "/worldclock/static/js/main.38cb2ef6.chunk.js",
-    "main.js.map": "/worldclock/static/js/main.38cb2ef6.chunk.js.map",
+    "main.js": "/worldclock/static/js/main.2492212b.chunk.js",
+    "main.js.map": "/worldclock/static/js/main.2492212b.chunk.js.map",
     "runtime-main.js": "/worldclock/static/js/runtime-main.97012c5c.js",
     "runtime-main.js.map": "/worldclock/static/js/runtime-main.97012c5c.js.map",
     "static/css/2.95456d05.chunk.css": "/worldclock/static/css/2.95456d05.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.95456d05.chunk.css",
     "static/js/2.cec3f003.chunk.js",
     "static/css/main.9cf96c30.chunk.css",
-    "static/js/main.38cb2ef6.chunk.js"
+    "static/js/main.2492212b.chunk.js"
   ]
 }
