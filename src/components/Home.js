@@ -7,10 +7,15 @@ import { now, now_la, now_ks, now_nz } from './DayUtils';
 
 const MyDatePicker = () => {
   const [startDate, setStartDate] = useState(new Date());
+
+  function displayDates(date) {
+    setStartDate(date);
+  }
+
   return (
     <DatePicker
       selected={startDate}
-      onChange={date => setStartDate(date)}
+      onChange={date => displayDates(date)}
       showTimeSelect
       timeFormat="h:mm aa"
       timeIntervals={15}
