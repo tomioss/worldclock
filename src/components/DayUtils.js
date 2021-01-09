@@ -16,7 +16,7 @@ export function now() {
   return dayjs().format(DATE_FORMAT);
 }
 
-export function formatNowTz(timezone) {
+function formatNowTz(timezone) {
   return dayjs().tz(timezone).format(DATE_FORMAT);
 }
 
@@ -36,7 +36,7 @@ export function formatDateLocal(date) {
   return dayjs(date).format(DATE_FORMAT);
 }
 
-export function formatDateTz(date, timezone) {
+function formatDateTz(date, timezone) {
   return dayjs(date).tz(timezone).format(DATE_FORMAT);
 }
 
