@@ -1,6 +1,24 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 
 import { now, now_la, now_ks, now_nz } from './DayUtils';
+
+const MyDatePicker = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  return (
+    <DatePicker
+      selected={startDate}
+      onChange={date => setStartDate(date)}
+      showTimeSelect
+      showTimeSelectOnly
+      timeIntervals={15}
+      timeCaption="Time"
+      dateFormat="h:mm aa"
+    />
+  );
+};
 
 class Home extends Component {
   state = {
@@ -26,6 +44,7 @@ class Home extends Component {
               </li>
             )}
           </ul>
+          <MyDatePicker />
         </div>
         <div></div>
       </div>
