@@ -12,10 +12,10 @@ const MyDatePicker = () => {
       selected={startDate}
       onChange={date => setStartDate(date)}
       showTimeSelect
-      showTimeSelectOnly
+      timeFormat="h:mm aa"
       timeIntervals={15}
-      timeCaption="Time"
-      dateFormat="h:mm aa"
+      timeCaption="time"
+      dateFormat="MM/dd/yyyy h:mm aa"
     />
   );
 };
@@ -36,7 +36,7 @@ class Home extends Component {
       <div id="home">
         <div></div>
         <div>
-          World Clock:
+          <h1>World Clock:</h1>
           <ul>
             {Object.entries(this.state.timezonesNow).map(([key, value]) =>
               <li key={key}>
@@ -44,6 +44,7 @@ class Home extends Component {
               </li>
             )}
           </ul>
+          <h3>Enter a date and time:</h3>
           <MyDatePicker />
         </div>
         <div></div>
