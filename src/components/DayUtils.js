@@ -16,16 +16,20 @@ export function now() {
   return dayjs().format(DATE_FORMAT);
 }
 
+export function formatNowTz(timezone) {
+  return dayjs().tz(timezone).format(DATE_FORMAT);
+}
+
 export function nowLa() {
-  return dayjs().tz(TZ_LA).format(DATE_FORMAT);
+  return formatNowTz(TZ_LA);
 }
 
 export function nowKs() {
-  return dayjs().tz(TZ_KS).format(DATE_FORMAT);
+  return formatNowTz(TZ_KS);
 }
 
 export function nowNz() {
-  return dayjs().tz(TZ_NZ).format(DATE_FORMAT);
+  return formatNowTz(TZ_NZ);
 }
 
 export function formatDateLocal(date) {
