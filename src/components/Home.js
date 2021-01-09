@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { now, now_la, now_ks, now_nz } from './DayUtils';
+import { now, nowLa, nowKs, nowNz } from './DayUtils';
 
 const MyDatePicker = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -29,9 +29,9 @@ class Home extends Component {
   state = {
     timezonesNow: {
       'Local': now(),
-      'Los Angeles': now_la(),
-      'Kansas': now_ks(),
-      'New Zealand': now_nz()
+      'Los Angeles': nowLa(),
+      'Kansas': nowKs(),
+      'New Zealand': nowNz()
     }
   };
 

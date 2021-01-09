@@ -16,14 +16,14 @@ export function now() {
   return dayjs().format(DATE_FORMAT);
 }
 
-export function now_la() {
+export function nowLa() {
   return dayjs().tz(TZ_LA).format(DATE_FORMAT);
 }
 
-export function now_ks() {
+export function nowKs() {
   return dayjs().tz(TZ_KS).format(DATE_FORMAT);
 }
 
-export function now_nz() {
+export function nowNz() {
   return dayjs().tz(TZ_NZ).format(DATE_FORMAT);
 }
