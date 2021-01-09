@@ -32,14 +32,18 @@ export function formatDateLocal(date) {
   return dayjs(date).format(DATE_FORMAT);
 }
 
+export function formatDateTz(date, timezone) {
+  return dayjs(date).tz(timezone).format(DATE_FORMAT);
+}
+
 export function formatDateLa(date) {
-  return dayjs(date).tz(TZ_LA).format(DATE_FORMAT);
+  return formatDateTz(date, TZ_LA);
 }
 
 export function formatDateKs(date) {
-  return dayjs(date).tz(TZ_KS).format(DATE_FORMAT);
+  return formatDateTz(date, TZ_KS);
 }
 
 export function formatDateNz(date) {
-  return dayjs(date).tz(TZ_NZ).format(DATE_FORMAT);
+  return formatDateTz(date, TZ_NZ);
 }
