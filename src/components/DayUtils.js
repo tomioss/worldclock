@@ -27,3 +27,19 @@ export function nowKs() {
 export function nowNz() {
   return dayjs().tz(TZ_NZ).format(DATE_FORMAT);
 }
+
+export function formatDateLocal(date) {
+  return dayjs(date).format(DATE_FORMAT);
+}
+
+export function formatDateLa(date) {
+  return dayjs(date).tz(TZ_LA).format(DATE_FORMAT);
+}
+
+export function formatDateKs(date) {
+  return dayjs(date).tz(TZ_KS).format(DATE_FORMAT);
+}
+
+export function formatDateNz(date) {
+  return dayjs(date).tz(TZ_NZ).format(DATE_FORMAT);
+}
