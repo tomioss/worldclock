@@ -5,17 +5,18 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import { now, nowLa, nowKs, nowNz } from './DayUtils';
 
-const MyDatePicker = () => {
+const MyDatePicker = (props) => {
   const [startDate, setStartDate] = useState(new Date());
 
-  function displayDates(date) {
+  const handleChange = date => {
     setStartDate(date);
+    props.onChange(date);
   }
 
   return (
     <DatePicker
       selected={startDate}
-      onChange={date => displayDates(date)}
+      onChange={handleChange}
       showTimeSelect
       timeFormat="h:mm aa"
       timeIntervals={15}
@@ -35,6 +36,10 @@ class Home extends Component {
     }
   };
 
+  handleChange = date => {
+    console.log(date)
+  }
+
   render() {
     return (
       // Home
@@ -50,7 +55,7 @@ class Home extends Component {
             )}
           </ul>
           <h3>Enter a date and time:</h3>
-          <MyDatePicker />
+          <MyDatePicker onChange={this.handleChange} />
         </div>
         <div></div>
       </div>
