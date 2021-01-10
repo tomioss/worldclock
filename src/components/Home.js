@@ -3,7 +3,7 @@ import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-import { now, nowLa, nowKs, nowNz } from './DayUtils';
+import { now, nowLa, nowKs, nowNz, formatDateLa, formatDateKs, formatDateNz } from './DayUtils';
 
 const MyDatePicker = (props) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -33,11 +33,18 @@ class Home extends Component {
       'Los Angeles': nowLa(),
       'Kansas': nowKs(),
       'New Zealand': nowNz()
-    }
+    },
+    selectDate: {}
   };
 
   handleChange = date => {
-    console.log(date)
+    this.setState({
+      selectDate: {
+        'Los Angeles': formatDateLa(date),
+        'Kansas': formatDateKs(date),
+        'New Zealand': formatDateNz(date)
+      }
+    });
   }
 
   render() {
@@ -56,6 +63,13 @@ class Home extends Component {
           </ul>
           <h3>Enter a date and time:</h3>
           <MyDatePicker onChange={this.handleChange} />
+          <ul>
+            {Object.entries(this.state.selectDate).map(([key, value]) =>
+              <li key={key}>
+                {key}: {value}
+              </li>
+            )}
+          </ul>
         </div>
         <div></div>
       </div>
