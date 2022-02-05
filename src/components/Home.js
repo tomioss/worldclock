@@ -34,8 +34,14 @@ class Home extends Component {
       'Kansas': nowKs(),
       'New Zealand': nowNz()
     },
-    selectDate: {}
+    selectDate: {},
+    selectedTimezone: 'Local',
   };
+
+  constructor() {
+    super();
+    this.onValueChange = this.onValueChange.bind(this);
+  }
 
   handleChange = date => {
     this.setState({
@@ -47,6 +53,12 @@ class Home extends Component {
     });
   }
 
+  onValueChange(event) {
+    this.setState({
+      selectedTimezone: event.target.value
+    });
+  }
+
   render() {
     return (
       // Home
@@ -54,6 +66,7 @@ class Home extends Component {
         <div></div>
         <div>
           <h1>World Clock:</h1>
+          <h3>Current date and time:</h3>
           <ul>
             {Object.entries(this.state.timezonesNow).map(([key, value]) =>
               <li key={key}>
