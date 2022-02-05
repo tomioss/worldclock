@@ -76,6 +76,20 @@ class Home extends Component {
           </ul>
           <h3>Enter a date and time:</h3>
           <MyDatePicker onChange={this.handleChange} />
+          <h4>Current timezone: </h4>
+          {Object.entries(this.state.timezonesNow).map(([key, value]) =>
+            <div key={key + '-id'}>
+              <label>
+                <input
+                  type="radio"
+                  value={key}
+                  checked={this.state.selectedTimezone === key}
+                  onChange={this.onValueChange}
+                />
+                {key}
+              </label>
+            </div>
+          )}
           <ul>
             {Object.entries(this.state.selectDate).map(([key, value]) =>
               <li key={key}>
